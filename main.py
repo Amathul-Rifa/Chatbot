@@ -17,7 +17,7 @@ def get_groq_response(question):
     messages = [
         {
             "role": "system",
-            "content": "You are a chat bot designed only to answer questions about cricketer Sachin Tendulkar. You do not know anything else. If someone asks questions on topics apart from Sachin Tendulkar, just say you don't know."
+            "content": "You are a chat bot designed only to answer questions about cricketer Shreyas Iyer. You do not know anything else. If someone asks questions on topics apart from Shreyas Iyer, just say you don't know."
         },
         {
             "role": "user",
@@ -34,10 +34,10 @@ def get_groq_response(question):
     return response.choices[0].message.content
 
 # Streamlit app title
-st.title("Sachin Tendulkar Chatbot")
+st.title("Shreyas Iyer Chatbot")
 
 # Display an image placeholder
-st.image("sachin.jpg", width=700, caption="Sachin Tendulkar")
+st.image("shreyas.jpg", width=700, caption="Shreyas Iyer")
 
 # Adjust CSS for padding and text wrapping
 st.markdown("""
@@ -59,7 +59,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Input box for user query
-query = st.text_input("Enter your query about Sachin Tendulkar:")
+query = st.text_input("Enter your query about Shreyas Iyer:")
 
 # Button to get response
 if st.button("Search"):
@@ -73,8 +73,8 @@ if st.button("Search"):
 
 # Additional Streamlit widgets for beautification
 st.sidebar.header("About This App")
-st.sidebar.markdown('<div class="sidebar-text">This app allows you to ask questions about the legendary cricketer Sachin Tendulkar. Feel free to explore and learn more about his career and achievements!</div>', unsafe_allow_html=True)
+st.sidebar.markdown('<div class="sidebar-text">This app allows you to ask questions about the legendary cricketer Shreyas Iyer. Feel free to explore and learn more about his career and achievements!</div>', unsafe_allow_html=True)
 
 # Add a footer
 st.markdown("---")
-st.markdown("Made with ❤️ using Streamlit")
+st.markdown("Made by Rifa using Streamlit")
